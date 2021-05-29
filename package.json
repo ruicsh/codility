@@ -1,0 +1,69 @@
+{
+  "name": "codility",
+  "version": "1.0.0",
+  "description": "Codility solutions in TypeScript",
+  "scripts": {
+    "dev": "jest --watchAll",
+    "start": "jest",
+    "lint": "eslint --ext ts lessons challenges",
+    "lint:ts": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "Rui Costa",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "26.0.23",
+    "@types/node": "15.6.1",
+    "@typescript-eslint/eslint-plugin": "4.25.0",
+    "@typescript-eslint/parser": "4.25.0",
+    "eslint": "7.27.0",
+    "eslint-config-airbnb-typescript": "12.3.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.23.3",
+    "eslint-plugin-jest": "24.3.6",
+    "jest": "27.0.2",
+    "prettier": "2.3.0",
+    "ts-jest": "27.0.1",
+    "typescript": "4.3.2"
+  },
+  "jest": {
+    "testMatch": [
+      "**/lessons/**/*.ts",
+      "**/demo-test/**/*.ts",
+      "**/challenges/**/*.ts",
+      "**/exams/**/*.ts",
+      "!**/challenges/**/*.skip.ts",
+      "!**/demo-test/**/*.skip.ts"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 80
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-typescript/base",
+      "prettier",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:import/typescript",
+      "plugin:jest/all"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "jest"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 9,
+      "project": "./tsconfig.json"
+    },
+    "env": {
+      "node": true,
+      "jest": true
+    }
+  }
+}
